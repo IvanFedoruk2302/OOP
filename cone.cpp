@@ -39,6 +39,6 @@ istream& operator>> (istream& stream, Cone& obj) {
     stream >> obj.y;
     stream >> obj.z;
     stream >> obj.radius;
-    stream >> obj.radius;
+    stream >> obj.height;
     return stream;
 }
