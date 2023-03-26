@@ -20,13 +20,13 @@ int main()
     cout << "Ďëîůŕäü ďîâĺđőíîńňč: " << c3.area() << "\n";
     cout << "Îáúĺě: " << c3.volume() << "\n";
     
-	Cone* arr = new Cone[3];
-	for (int i = 0; i < 3; i++) {
-		cout << "Введите данные " << i + 1 << " конуса: " << endl;
-		cin >> arr[i];
-		cout << arr[i];
-		cout << "Объём: " << arr[i].volume() << endl;
-		cout << "Площадь : " << arr[i].area() << endl;
+    Cone* arr = new Cone[3];
+    for (int i = 0; i < 3; i++) {
+	cout << "Введите данные " << i + 1 << " конуса: " << endl;
+	cin >> arr[i];
+	cout << arr[i];
+	cout << "Объём: " << arr[i].volume() << endl;
+	cout << "Площадь : " << arr[i].area() << endl;
 	}
     delete[] arr;
     
