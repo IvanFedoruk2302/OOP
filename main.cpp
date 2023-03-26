@@ -1,23 +1,34 @@
 #include "cone.h"
 int main()
 {
+    int n;
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     setlocale(LC_ALL, "Russian");
     Cone c1(3, 7);              
     Cone c2(1, 2, 3, 5, 10);
     Cone c3(3, 5, 7, 8, 9);
-    cout << "Êîíóñ 1: " << c1;
-    cout << "Ïëîùàäü ïîâåðõíîñòè: " << c1.area() << "\n";
-    cout << "Îáúåì: " << c1.volume() << "\n";
+    cout << "Ä˜Ã®Ã­Ã³Å„ 1: " << c1;
+    cout << "ÄŽÃ«Ã®Å¯Å•Ã¤Ã¼ ÄÃ®Ã¢ÄºÄ‘Å‘Ã­Ã®Å„ÅˆÄ: " << c1.area() << "\n";
+    cout << "ÃŽÃ¡ÃºÄºÄ›: " << c1.volume() << "\n";
 
-    cout << "Êîíóñ 2: " << c2;
-    cout << "Ïëîùàäü ïîâåðõíîñòè: " << c2.area() << "\n";
-    cout << "Îáúåì: " << c2.volume() << "\n";
+    cout << "Ä˜Ã®Ã­Ã³Å„ 2: " << c2;
+    cout << "ÄŽÃ«Ã®Å¯Å•Ã¤Ã¼ ÄÃ®Ã¢ÄºÄ‘Å‘Ã­Ã®Å„ÅˆÄ: " << c2.area() << "\n";
+    cout << "ÃŽÃ¡ÃºÄºÄ›: " << c2.volume() << "\n";
 
-    cout << "Êîíóñ 3: " << c3;
-    cout << "Ïëîùàäü ïîâåðõíîñòè: " << c3.area() << "\n";
-    cout << "Îáúåì: " << c3.volume() << "\n";
-
+    cout << "Ä˜Ã®Ã­Ã³Å„ 3: " << c3;
+    cout << "ÄŽÃ«Ã®Å¯Å•Ã¤Ã¼ ÄÃ®Ã¢ÄºÄ‘Å‘Ã­Ã®Å„ÅˆÄ: " << c3.area() << "\n";
+    cout << "ÃŽÃ¡ÃºÄºÄ›: " << c3.volume() << "\n";
+    
+	Cone* arr = new Cone[3];
+	for (int i = 0; i < 3; i++) {
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ " << i + 1 << " ÐºÐ¾Ð½ÑƒÑÐ°: " << endl;
+		cin >> arr[i];
+		cout << arr[i];
+		cout << "ÐžÐ±ÑŠÑ‘Ð¼: " << arr[i].volume() << endl;
+		cout << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ : " << arr[i].area() << endl;
+	}
+    delete[] arr;
+    
     return 0;
 }
