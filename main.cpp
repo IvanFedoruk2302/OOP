@@ -30,7 +30,7 @@ public:
 int main()
 {
     SetConsoleCP(1251);
-    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     setlocale(LC_ALL, "ru");
     cout << "Первый пример: " << endl;
     type1 Example1;
