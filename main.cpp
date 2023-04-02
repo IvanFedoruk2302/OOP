@@ -1,13 +1,14 @@
 #include <iostream>
+#include <Windows.h>
 using namespace std;
 
 class type1 {
 public:
     void Get_answer() {
-        cout << "Îòâåò: Ëþáîå çíà÷åíèå Õ" << endl;
+        cout << "ÐžÑ‚Ð²ÐµÑ‚: Ð›ÑŽÐ±Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¥" << endl;
     }
     void show() {
-        cout << "Óðàâíåíèå:  0 = 0" << endl;
+        cout << "Ð£Ñ€Ð°Ð²Ð½ÐµÐ½Ð¸Ðµ:  0 = 0" << endl;
     }
 };
 
@@ -19,21 +20,23 @@ public:
         A = a1;
     }
     void Get_answer() {
-        cout << "Îòâåò:  Õ = 0" << endl;
+        cout << "ÐžÑ‚Ð²ÐµÑ‚:  Ð¥ = 0" << endl;
     }
     void show() {
-        cout << "Óðàâíåíèå " << A << "* x^2 = 0" << endl;
+        cout << "Ð£Ñ€Ð°Ð²Ð½ÐµÐ½Ð¸Ðµ " << A << " * x^2 = 0" << endl;
     }
 };
 
 int main()
 {
+    SetConsoleCP(1251);
+    SetConsoleCP(1251);
     setlocale(LC_ALL, "ru");
-    cout << "Ïåðâûé ïðèìåð: " << endl;
+    cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¹ Ð¿Ñ€Ð¸Ð¼ÐµÑ€: " << endl;
     type1 Example1;
     Example1.Get_answer();
     Example1.show();
-    cout << "Âòîðîé ïðèìåð: " << endl;
+    cout << "Ð’Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð¿Ñ€Ð¸Ð¼ÐµÑ€: " << endl;
     type2 Example2(4);
     Example2.Get_answer();
     Example2.show();
