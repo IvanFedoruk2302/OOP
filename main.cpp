@@ -66,6 +66,54 @@ public:
     }
 };
 
+class type5 {
+private:
+    double B, C;
+public:
+    type5(double b1, double c1) {
+        B = b1;
+        C = c1;
+    }
+    void Get_answer() {
+        cout << "Корень уравнения: " << (-1) * (C / B) << endl;
+    }
+    void show() {
+        cout << "Уравнение " << B << "*x + " << C << " = 0" << endl;
+    }
+};
+
+class type6 {
+private:
+    double A, B, C;
+public:
+    type6(double a1, double b1, double c1) {
+        A = a1;
+        B = b1;
+        C = c1;
+    }
+    void Get_answer() {
+        double D = B * B - 4 * A * C;
+        if (D < 0) {
+            cout << "Уравнение не имеет действительных корней " << endl;
+        }
+        else {
+            if (D == 0) {
+                double x = ((-1) * B - sqrt(D)) / (2 * A);
+                cout << "Корень уравнения: " << x << endl;
+            }
+            else {
+                double x1 = ((-1) * B - sqrt(D)) / (2 * A);
+                double x2 = ((-1) * B + sqrt(D)) / (2 * A);
+                cout << "Корни уравнения: " << endl;
+                cout << "X1 = " << x1 << endl << "X2 = " << x2 << endl;
+            }
+        }
+    }
+    void show() {
+        cout << "Уравнение " << A << "*x^2 + " << B << "*x + " << C << " = 0" << endl;
+    }
+};
+
 int main()
 {
     SetConsoleCP(1251);
@@ -90,6 +138,16 @@ int main()
     type4 Example4(1, -25);
     Example4.Get_answer();
     Example4.show();
+
+    cout << "Пятый пример: " << endl;
+    type5 Example5(10,20);
+    Example5.Get_answer();
+    Example5.show();
+
+    cout << "Шестой пример: " << endl;
+    type6 Example6(1,5,6);
+    Example6.Get_answer();
+    Example6.show();
 
     return 0;
 
