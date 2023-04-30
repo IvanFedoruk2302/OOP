@@ -112,6 +112,44 @@ public:
     void show() {
         cout << "Уравнение " << A << "*x^2 + " << B << "*x + " << C << " = 0" << endl;
     }
+    
+class type7 {
+    private:
+    double B;
+    public:
+    type7 (double b1) {
+        B = b1;
+    }
+    void Get_answer () {
+        cout << "Корень уравнения: x = 0" << endl;
+    }
+    void show () {
+        cout << "Уравнение " << B << "*x = 0" << endl;
+    }
+};
+
+class type8 {
+    private:
+    double A, B;
+    public:
+    type8 (double a1, double b1) {
+        A = a1;
+        B = b1;
+    }
+    void Get_answer () {
+                double x = ((-1)*B)/A;
+                cout << "Корни уравнения: " << endl;
+                cout << "X1 = 0" << endl << "X2 = " << x << endl;
+    }
+    void show () {
+        cout << "Уравнение " << A << "*x^2 + " << B << "*x = 0 " << endl;
+    }
+};
+
+int main()
+{
+    return 0;
+}
 };
 
 int main()
@@ -148,7 +186,16 @@ int main()
     type6 Example6(1,5,6);
     Example6.Get_answer();
     Example6.show();
-
+    
+    cout << "Седьмой пример: " << endl;
+    type6 Example6(5);
+    Example6.Get_answer();
+    Example6.show();
+    
+    cout << "Восьмой пример: " << endl;
+    type6 Example6(1,5);
+    Example6.Get_answer();
+    Example6.show();
     return 0;
 
 }
