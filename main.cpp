@@ -188,14 +188,14 @@ int main()
     Example6.show();
     
     cout << "Седьмой пример: " << endl;
-    type6 Example6(5);
-    Example6.Get_answer();
-    Example6.show();
+    type7 Example7(5);
+    Example7.Get_answer();
+    Example7.show();
     
     cout << "Восьмой пример: " << endl;
-    type6 Example6(1,5);
-    Example6.Get_answer();
-    Example6.show();
+    type8 Example8(1,5);
+    Example8.Get_answer();
+    Example8.show();
     return 0;
 
 }
