@@ -148,12 +148,6 @@ class type8 {
 
 int main()
 {
-    return 0;
-}
-};
-
-int main()
-{
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     setlocale(LC_ALL, "ru");
