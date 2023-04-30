@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+template <typename T> void Sort(vector<T>& arr) {
+    int n = arr.size();
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                T temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+template <> void Sort(vector<string>& arr) {
+    int n = arr.size();
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j].compare(arr[j + 1]) > 0) {
+                string temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+int main(){
+setlocale(LC_ALL,"ru");
+vector<int> int_arr = { 9,1,5,6,4 };
+vector<double> double_arr = { 5.3, 2.1, 9.5, 1.5, 1.4, 6.4 };
+vector<string> string_arr = { "баян" , "аккордеон" , "язык", "нага"};
+
+Sort(int_arr);
+Sort(double_arr);
+Sort(string_arr);
+
+for (int i = 0; i < int_arr.size(); i++) {
+    cout << int_arr[i] << " ";
+}
+cout << endl;
+
+for (int i = 0; i < double_arr.size(); i++) {
+    cout << double_arr[i] << " ";
+}
+cout << endl;
+
+for (int i = 0; i < string_arr.size(); i++) {
+    cout << string_arr[i] << " ";
+}
+cout << endl;
+
+return 0;
+}
