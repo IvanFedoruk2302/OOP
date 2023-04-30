@@ -112,6 +112,7 @@ public:
     void show() {
         cout << "Уравнение " << A << "*x^2 + " << B << "*x + " << C << " = 0" << endl;
     }
+};
     
 class type7 {
     private:
