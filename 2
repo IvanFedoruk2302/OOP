@@ -3,7 +3,7 @@
 using namespace std;
 int getElement(int* array, int size, int index) {
 	if (index < 0 or index >= size) {
-		throw std::out_of_range("Неправильный индекс массива");
+		throw out_of_range("Неправильный индекс массива");
 	}
 	return array[index];
 }
