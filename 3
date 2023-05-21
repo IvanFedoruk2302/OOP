@@ -1,0 +1,31 @@
+#include <iostream>
+#include <set>
+#include <stdexcept>
+using namespace std;
+int findElement(const set<int>& set, int element) {
+    if (set.empty()) {
+        throw out_of_range("Множество пусто");
+    }
+    auto it = set.find(element);
+    if (it == set.end()) {
+        throw out_of_range("Элемент не найден");
+    }
+    return *it;
+}
+
+int main() 
+{   
+    setlocale(LC_ALL,"Russian");
+    try {
+        set<int> mySet = {1,2,3};
+        int element;
+        cout << "Введите номер элемента: "<<endl;
+        cin >> element;
+        int foundElement = findElement(mySet, element);
+        cout << "Найденный элемент: " << foundElement <<endl;
+    }
+    catch (const out_of_range& e) {
+        cout << "Ошибка: " << e.what() << endl;
+    }
+    return 0;
+}
