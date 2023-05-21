@@ -1,0 +1,27 @@
+#include <iostream>
+#include <stdexcept>
+using namespace std;
+int getElement(int* array, int size, int index) {
+	if (index < 0 or index >= size) {
+		throw std::out_of_range("Неправильный индекс массива");
+	}
+	return array[index];
+}
+
+int main() 
+{	
+	setlocale(LC_ALL, "Russian");
+	try {
+		int array[] = { 1, 2, 3, 4 };
+		int size = sizeof(array) / sizeof(array[0]);
+		cout << "Какой элемент массива нужно вывести? " << endl;
+		int index;
+		cin >> index;
+		int element = getElement(array, size, index);
+		cout << "Элемент массива: " << element << std::endl;
+	}
+	catch (const out_of_range& e) {
+		cout << "Ошибка: " << e.what() << std::endl;
+	}
+	return 0;
+}
